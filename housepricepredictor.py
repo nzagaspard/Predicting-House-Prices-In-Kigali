@@ -8,7 +8,7 @@ hide_st_style = """
     footer {visibility: hidden;}
 </style>
 """
-st.set_page_config(page_title="house price predictor",page_icon=":house_buildings:")
+st.set_page_config(page_title="House Price Predictor|Kigali", page_icon=":house_buildings:")
 st.markdown(hide_st_style, unsafe_allow_html=True)
 st.title('Predicting the house price in Kigali')
 st.markdown('<style>h1{color: darkgreen;}</style>', unsafe_allow_html=True)
@@ -122,4 +122,4 @@ disclaimer = st.beta_expander('Details & Disclaimer!')
 disclaimer.markdown("""  :warning: This project was developed for practice purposes. Due to some information 
 that would help to accurately predict the house price that were not given when listing the houses
 in the scraped data, I don't advise to consider and use the predicted prices here as ground truth!""")
-disclaimer.markdown(""" :information_source: The notebook used to for explaratory data analysis and building machine learning models can be found [here]()""")
+disclaimer.markdown(""" :information_source: The notebook used to for explaratory data analysis and building machine learning models can be found [here](https://github.com/nzagaspard/Predicting-House-Prices-In-Kigali/blob/ce89583c83afc587161b31a597913b3f1f32b7b4/Modeling/Predicting%20House%20Price%20In%20Kigali%20Using%20Machine%20Learning.ipynb)""")
