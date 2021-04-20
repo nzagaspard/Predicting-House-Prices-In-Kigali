@@ -14,7 +14,7 @@ st.title('Predicting the house price in Kigali')
 st.markdown('<style>h1{color: darkgreen;}</style>', unsafe_allow_html=True)
 
 st.sidebar.header('About')
-st.sidebar.info("""This projects uses the data collected (Web Scrapped) from a website that list the houses for sale in Rwanda, 
+st.sidebar.info("""This project uses the data collected (Web Scrapped) from a website that list the houses for sale in Rwanda, 
 and employs machine learning to predict the price of a house given its neighborhood, plot size, number of bedrooms and bathrooms, etc.""")
 st.sidebar.header('Info')
 st.sidebar.info("""Gaspard Nzasabimfura  \n Data Analyst, Scientist & Engineer  \n Email: nzagaspard@gmail.com  \n Tel: +250789779262""")
