@@ -38,7 +38,7 @@ wardrobes = st.checkbox('Check if has built-in wardrobes')
 cabinets = st.checkbox('Check if has kitchen with cabinets')
 balcony = st.checkbox('Check if has balcony')
 boys_quarters = st.checkbox("Check if has boys' quarter/annex")
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 predict_button = col2.button('Predict')
 prediction_space = st.empty()
  
@@ -118,7 +118,7 @@ if predict_button:
             prediction_space.header(f'The predicted price is {int(predicted_price):,} Rwf')
  
 st.write('#')
-disclaimer = st.beta_expander('Details & Disclaimer!')
+disclaimer = st.expander('Details & Disclaimer!')
 disclaimer.markdown("""  :warning: This project was developed for practice purposes. Due to some information 
 that would help to accurately predict the house price that were not given when listing the houses
 in the scraped data, I don't advise to consider and use the predicted prices here as ground truth!""")
