@@ -112,11 +112,14 @@ if predict_button:
     if (neighborhood == '') | (plotsizes == ''):
         st.error('Please select the neighborhood and the plotsize!')
     else:
-        with st.spinner('Please wait. Predicting ...'):            
-            predictors = prepare_predictors()
-            predicted_price = round(predict(predictors)[0], -6)
-            prediction_space.header(f'The predicted price is {int(predicted_price):,} Rwf')
- 
+        try:
+            with st.spinner('Please wait. Predicting ...'):            
+                predictors = prepare_predictors()
+                predicted_price = round(predict(predictors)[0], -6)
+                prediction_space.header(f'The predicted price is {int(predicted_price):,} Rwf')
+        except:
+            st.error('Something went wrong, contact the developer!')
+     
 st.write('#')
 disclaimer = st.expander('Details & Disclaimer!')
 disclaimer.markdown("""  :warning: This project was developed for practice purposes. Due to some information 
