@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import xgboost as xb
 
 hide_st_style = """
 <style>
@@ -20,10 +21,14 @@ st.sidebar.header('Info')
 st.sidebar.info("""Gaspard Nzasabimfura  \n Data Analyst, Scientist & Engineer  \n Email: nzagaspard@gmail.com  \n Tel: +250789779262""")
      
 def predict(features):
-    with open('kigali houses model.sav', 'rb') as saved_model:
-         model = pickle.load(saved_model)
-         st.write(features)
-         price = model.predict(features)
+    # with open('kigali houses model.sav', 'rb') as saved_model:
+    #      model = pickle.load(saved_model)
+    #      st.write(features)
+    #      price = model.predict(features)
+    model = xgb.Booster()
+    model.load_model('kigali houses model.bin')
+    price = model.predict(features)
+
     return price
 
 neighborhoods = ['','Gacuriro','Gahanga','Gatenga','Gikondo','Gisozi','Kabeza','Kabuga','Ndera','Rusororo',
