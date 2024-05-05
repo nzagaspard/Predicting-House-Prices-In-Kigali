@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import xgboost as xb
+import xgboost as xgb
 
 hide_st_style = """
 <style>
