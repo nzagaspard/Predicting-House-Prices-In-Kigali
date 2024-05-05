@@ -22,6 +22,7 @@ st.sidebar.info("""Gaspard Nzasabimfura  \n Data Analyst, Scientist & Engineer  
 def predict(features):
     with open('kigali houses model.sav', 'rb') as saved_model:
          model = pickle.load(saved_model)
+         st.write(features)
          price = model.predict(features)
     return price
 
