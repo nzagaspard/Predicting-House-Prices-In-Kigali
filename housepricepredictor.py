@@ -27,7 +27,9 @@ def predict(features):
     #      price = model.predict(features)
     model = xgb.Booster()
     model.load_model('kigali houses model.bin')
-    price = model.predict(features)
+    features_values = features.values
+    features_matrix = xgb.DMatrix(predictors)
+    price = model.predict(features_matrix)
 
     return price
 
