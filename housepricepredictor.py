@@ -117,7 +117,8 @@ if predict_button:
                 predictors = prepare_predictors()
                 predicted_price = round(predict(predictors)[0], -6)
                 prediction_space.header(f'The predicted price is {int(predicted_price):,} Rwf')
-        except:
+        except Exception as e:
+            st.write(e)
             st.error('Something went wrong, contact the developer!')
      
 st.write('#')
